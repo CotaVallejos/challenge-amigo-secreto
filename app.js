@@ -29,7 +29,7 @@ function actualizarLista() {
     let lista = document.getElementById("listaAmigos");
     lista.innerHTML = "";
     
-    amigos.forEach(amigo => {
+    amigos.forEach((amigo) => {
         let li = document.createElement("li");
         li.textContent = amigo;
         lista.appendChild(li);
@@ -44,5 +44,9 @@ function sortearAmigo() {
 
     let indice = Math.floor(Math.random() * amigos.length);
     let ganador = amigos[indice];
-    document.getElementById("resultado").innerHTML = `<li>El amigo secreto es: <strong>${ganador}</strong></li>`;
+    let resultadoLista = document.getElementById("resultado");
+    resultadoLista.innerHTML = "";
+    let li = document.createElement("li");
+    li.innerHTML = `<strong>El amigo secreto es: ${ganador}</strong>`;
+    resultadoLista.appendChild(li);
 }
