@@ -2,7 +2,9 @@
 let amigos = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("nombre").addEventListener("keypress", (event) => {
+    document.querySelector(".button-add").addEventListener("click", agregarAmigo);
+    document.querySelector(".button-draw").addEventListener("click", sortearAmigo);
+    document.getElementById("amigo").addEventListener("keypress", (event) => {
         if (event.key === "Enter") {
             agregarAmigo();
         }
@@ -10,11 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function agregarAmigo() {
-    let input = document.getElementById("nombre");
+    let input = document.getElementById("amigo");
     let nombre = input.value.trim();
 
     if (nombre === "") {
-        alert("Por favor, inserte un nombre.");
+        alert("Por favor, inserte un nombre válido.");
         return;
     }
 
@@ -42,5 +44,5 @@ function sortearAmigo() {
 
     let indice = Math.floor(Math.random() * amigos.length);
     let ganador = amigos[indice];
-    document.getElementById("resultado").textContent = "El amigo secreto es: " + ganador;
+    document.getElementById("resultado").innerHTML = `<li>El amigo secreto es: <strong>${ganador}</strong></li>`;
 }
