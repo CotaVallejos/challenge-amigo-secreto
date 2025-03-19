@@ -14,9 +14,9 @@ Este proyecto es una aplicación web simple que permite a los usuarios agregar n
 
 ## Instrucciones de uso
 1. Abre el archivo `index.html` en un navegador web.
-2. Ingresa un nombre en el campo de texto y haz clic en "Adicionar".
+2. Ingresa un nombre en el campo de texto y haz clic en "Añadir".
 3. Los nombres ingresados aparecerán en una lista debajo del campo de entrada.
-4. Cuando todos los nombres estén agregados, haz clic en "Sortear Amigo".
+4. Cuando todos los nombres estén agregados, haz clic en el botón "Sortear Amigo".
 5. Se seleccionará un nombre aleatorio y se mostrará en pantalla.
 
 ## Requisitos
